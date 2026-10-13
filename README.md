@@ -2,6 +2,8 @@
 
 Turn a CODEOWNERS file and a file list into a path-by-owner map — and see where ownership is broken. Every file resolves to its owners (GitHub last-match-wins semantics); the report shows coverage, orphan paths, per-owner load, and single-owner hotspots. Two local files in, one report out: no git, no API calls. Pure Python, standard library only.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 CODEOWNERS is usually written once and left to rot. Nobody can answer "who owns `src/legacy/`?" without reading the file top to bottom, mentally applying last-match-wins, and hoping no pattern is shadowed. The visible symptoms — review requests bouncing, PRs waiting on a departed engineer, whole directories silently uncovered — appear only when a change lands in the wrong place. The gap between "CODEOWNERS exists" and "CODEOWNERS reflects reality" is invisible until it costs a day of review latency.
